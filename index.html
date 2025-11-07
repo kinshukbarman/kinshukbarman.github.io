@@ -1,201 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Title & Description -->
-  <title>KINSHUK BARMAN</title>
-  <meta name="description" content="Project X">
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://kinshukbarman.in">
-
-  <!-- Robots (allow indexing) -->
-  <meta name="robots" content="index, follow">
-
-  <!-- Google Site Verification (replace with your code if needed) -->
-  <meta name="google-site-verification" content="YOUR-GOOGLE-VERIFICATION-CODE-HERE">
-
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-
-  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="KINSHUK BARMAN">
-  <meta property="og:description" content="Project X">
-  <meta property="og:url" content="https://kinshukbarman.in">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://kinshukbarman.in/favicon-96x96.png"">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KINSHUK BARMAN">
-  <meta name="twitter:description" content="Project X">
-  <meta name="twitter:image" content="https://kinshukbarman.in/">
-  <meta name="twitter:url" content="https://kinshukbarman.in/favicon-96x96.png"">
-
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "name": "Kinshuk Barman",
-  "url": "https://kinshukbarman.in",
-  "image": "https://kinshukbarman.in/favicon-32x32.png"
-}
-</script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies Consent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <div class="container">
-    <div class="flash-text">KINSHUK BARMAN</div>
-    <div class="under-construction">This website is under construction</div>
-    <div class="project-x">Project X</div>
+  <div class="cookie-container">
+    <img src="hand.png" alt="Hand holding card" class="hand">
+
+    <!-- Cookie message card -->
+    <div class="cookie-card" id="cookieCard">
+      <h2>COOKIES</h2>
+      <p>WE USE COOKIES TO IMPROVE YOUR EXPERIENCE!</p>
+      <div class="btns">
+        <button class="accept" id="acceptBtn">ACCEPT</button>
+        <button class="decline">DECLINE</button>
+      </div>
+    </div>
+
+    <!-- Success tick card -->
+    <div class="cookie-success" id="cookieSuccess">
+      <div class="tick">
+        <!-- Inline SVG for perfect blue tick -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+          <circle cx="26" cy="26" r="25" fill="#3399ff" stroke="#000" stroke-width="3"/>
+          <path fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+            d="M14 27l8 8 16-16"/>
+        </svg>
+      </div>
+      <p>THANK YOU!</p>
+    </div>
   </div>
 
-  <footer>
-    &copy; 2025 KINSHUK BARMAN. All rights reserved.
-  </footer>
+  <script>
+    const acceptBtn = document.getElementById("acceptBtn");
+    const card = document.getElementById("cookieCard");
+    const success = document.getElementById("cookieSuccess");
 
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: white;
-      color: #111;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .container {
-      text-align: center;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .flash-text {
-      font-size: 3.5rem;
-      font-weight: 900;
-      letter-spacing: 3px;
-      animation: flashlight 4.5s ease forwards;
-    }
-
-    /* 3 flashes: red, green, blue - high contrast, then fade out */
-    @keyframes flashlight {
-      0% {
-        color: #111;
-        text-shadow: none;
-        opacity: 0;
-      }
-      /* 1st flash - Red */
-      10% {
-        opacity: 1;
-        color: #ff0000;
-        text-shadow:
-          0 0 10px #ff0000,
-          0 0 20px #ff0000,
-          0 0 30px #ff4444,
-          0 0 40px #ff4444;
-      }
-      25% {
-        color: #111;
-        text-shadow: none;
-        opacity: 1;
-      }
-      /* 2nd flash - Green */
-      35% {
-        opacity: 1;
-        color: #00cc00;
-        text-shadow:
-          0 0 10px #00cc00,
-          0 0 20px #00cc00,
-          0 0 30px #44ff44,
-          0 0 40px #44ff44;
-      }
-      50% {
-        color: #111;
-        text-shadow: none;
-        opacity: 1;
-      }
-      /* 3rd flash - Blue */
-      60% {
-        opacity: 1;
-        color: #0066ff;
-        text-shadow:
-          0 0 10px #0066ff,
-          0 0 20px #0066ff,
-          0 0 30px #4488ff,
-          0 0 40px #4488ff;
-      }
-      75% {
-        color: #111;
-        text-shadow: none;
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-
-    .under-construction, .project-x {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: #333;
-      opacity: 0;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-in-out;
-    }
-
-    .under-construction {
-      animation-name: fadeIn;
-      animation-duration: 1.5s;
-      animation-delay: 4.6s;
-    }
-
-    .project-x {
-      animation-name: fadeIn;
-      animation-duration: 1.5s;
-      animation-delay: 5.5s;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    footer {
-      font-size: 0.9rem;
-      color: #777;
-      padding: 12px 0;
-      text-align: center;
-      width: 100%;
-      border-top: 1px solid #eee;
-      background: #fff;
-      flex-shrink: 0;
-      position: relative;
-      bottom: 0;
-    }
-  </style>
+    acceptBtn.addEventListener("click", () => {
+      card.classList.add("hide");
+      success.classList.add("show");
+    });
+  </script>
 </body>
-
+</html>
